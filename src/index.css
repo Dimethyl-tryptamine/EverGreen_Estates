@@ -1,0 +1,64 @@
+/* src/index.css */
+
+/* Tailwind's base styles */
+@tailwind base;
+
+/* Reset global margin and padding */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Ensure full height and width for body and html */
+  body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 100%; /* Ensure full height */
+    width: 100%;  /* Ensure full width */
+    margin: 0;    /* Remove any default margin */
+    padding: 0;   /* Remove any default padding */
+  }
+}
+
+/* Tailwind's component styles */
+@tailwind components;
+
+/* Tailwind's utility classes */
+@tailwind utilities;
+
+/* Custom text-shadow utilities */
+.text-bottom-shadow-xl {
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.text-bottom-shadow-sm {
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom styles for input search cancel button */
+input::-webkit-search-cancel-button {
+  filter: brightness(0) saturate(100%) invert(37%) sepia(7%) saturate(561%) hue-rotate(170deg) brightness(93%);
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #228000 !important;
+  border-radius: 10px !important;
+  border: 2px solid #141616 !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #141616 !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-button {
+  display: none !important;
+}
+
